@@ -18,7 +18,9 @@ function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
     <UserProvider>
-      <main className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
+      <main
+        className={`${dmSans.variable} ${dmSerifDisplay.variable} font-body`}
+      >
         {getLayout(<Component {...pageProps} />, pageProps)}
       </main>
     </UserProvider>
